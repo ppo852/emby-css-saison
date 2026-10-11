@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using MediaBrowser.Model.Tasks;
+
+namespace CssSaison
+{
+    public class ApplySeasonTask : IScheduledTask
+    {
+        public string Name => PluginConstants.Name + " — Appliquer le thème";
+
+        public string Key => PluginConstants.TaskKey;
+
+        public string Description =>
+            "Recalcule la saison et met à jour le Custom CSS Branding.";
+
+        public string Category => PluginConstants.Name;
+
+        public Task Execute(CancellationToken cancellationToken, IProgress<double> progress)
+        {
+            progress?.Report(0);
+            if (!cancellationToken.IsCancellationRequested)
+                Plugin.Instance?.ThemeEngine?.TryApplyFromPlugin();
+            progress?.Report(100);
+            return Task.CompletedTask;
+        }
+
+        public IEnumerable<TaskTriggerInfo> GetDefaultTriggers()
+        {
+            return new[]
+            {
+                new TaskTriggerInfo
+                {
+                    Type = TaskTriggerInfo.TriggerDaily,
+                    TimeOfDayTicks = TimeSpan.FromHours(3).Add(TimeSpan.FromMinutes(15)).Ticks
+                }
+            };
+        }
+    }
+}
