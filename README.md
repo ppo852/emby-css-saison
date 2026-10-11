@@ -3,10 +3,8 @@
 **Emby Server plugin** — switch **Branding Custom CSS** by calendar windows (`DD-MM`), with an in-dashboard CSS editor.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.1.1-green.svg)](CHANGELOG.md)
 [![Target](https://img.shields.io/badge/Emby-4.9.x-orange.svg)](#compatibility)
-
-> **FR** — Plugin Emby qui injecte un fichier CSS dans le Branding selon des périodes **JJ-MM**, avec éditeur intégré. Voir les sections ci-dessous (bilingue où utile).
 
 ---
 
@@ -19,10 +17,11 @@
 | **Off-season** | Applies `default.css` if present |
 | **Manual mode** | Force one season from a dropdown |
 | **CSS editor** | Dashboard dialogs to paste/save each theme file |
-| **Apply triggers** | Server start · Save settings · Scheduled task daily **03:15** (server time) |
+| **Apply triggers** | Server start · Save settings · Save CSS editor · Scheduled task daily **03:15** (server time) |
 | **Safe apply** | Missing/empty file → no Branding change · same CSS → skip write |
 
-No theme CSS is shipped inside the DLL — you provide the files.
+No theme CSS is shipped inside the DLL — you provide the files.  
+Dashboard UI language is **English**. The product name **CSS Saison** is kept as the brand.
 
 ---
 
@@ -47,22 +46,24 @@ No theme CSS is shipped inside the DLL — you provide the files.
 
 ## Seasons (defaults)
 
-| Season | Default period (`DD-MM → DD-MM`) | Default file |
-|--------|----------------------------------|--------------|
+| Season (UI) | Default period (`DD-MM → DD-MM`) | Default file name |
+|-------------|----------------------------------|-------------------|
 | Valentine | `01-02 → 15-02` | `valentine.css` |
 | Saint-Patrick | `10-03 → 18-03` | `saint-patrick.css` |
-| Easter (Pâques) | `01-04 → 20-04` | `paques.css` |
+| Easter | `01-04 → 20-04` | `paques.css` |
 | 4th of July | `28-06 → 06-07` | `juillet.css` |
 | Halloween | `01-10 → 01-11` | `halloween.css` |
 | Thanksgiving | `15-11 → 30-11` | `thanksgiving.css` |
-| Christmas (Noël) | `01-12 → 26-12` | `noel.css` |
+| Christmas | `01-12 → 26-12` | `noel.css` |
 | New Year | `27-12 → 02-01` | `nouvel-an.css` |
 | Default (off-season) | — | `default.css` |
 
 Periods and enable flags are editable. Seasons are **fixed** (not a dynamic rule list).  
 By default the **plugin and all seasons are disabled** — enable what you need.
 
-Period format in the UI: `01-12 → 26-12` (also accepts `->` or `/`).
+Default **file names** keep short historical stems (`noel.css`, `paques.css`, …); you can rename them in config if needed.
+
+Period format in the UI: `01-12 → 26-12` (also accepts `->` or spaced ` / `).
 
 ---
 
@@ -96,7 +97,8 @@ You can create them via the **Edit CSS** buttons (empty file until you paste con
 ### Apply immediately
 
 - Save the settings page, **or**
-- **Scheduled Tasks → CSS Saison — Appliquer le thème**
+- Save inside a CSS editor dialog, **or**
+- **Scheduled Tasks → CSS Saison — Apply theme**
 
 Automatic: every day around **03:15** (server time) + on server start.
 
@@ -119,8 +121,8 @@ Output:
 
 ## Compatibility
 
-- Built against `MediaBrowser.Server.Core` **4.9.1.80+ / 4.9.x**
-- Often works on Emby **4.9 / 4.10** — always test on your server before production use
+- Built against `MediaBrowser.Server.Core` **4.9.1.90** (Emby **4.9.x**; often OK on **4.10**)
+- Always test on your server before production use
 - Plugin GUID (stable): `D4E8F1A2-3B5C-4D6E-8F90-1A2B3C4D5E6F`
 
 ---
@@ -143,11 +145,8 @@ Config file name on disk: `CSS Saison.json` (under Emby plugin configurations).
 
 **GitHub:** [ppo852/emby-css-saison](https://github.com/ppo852/emby-css-saison)
 
-**Short description (EN):**  
+**Short description:**  
 Emby Server plugin that switches Branding Custom CSS by date rules (DD-MM), with an in-dashboard CSS editor.
-
-**Short description (FR):**  
-Plugin Emby Server qui applique un Custom CSS Branding selon des périodes JJ-MM, avec éditeur CSS intégré.
 
 **Topics:** `emby` · `emby-plugin` · `css` · `branding` · `seasonal` · `theme` · `dotnet` · `csharp` · `media-server` · `custom-css`
 
@@ -157,8 +156,6 @@ Plugin Emby Server qui applique un Custom CSS Branding selon des périodes JJ-MM
 
 Special thanks to **Aleas** from the Emby community for the excellent theme work that inspired seasonal CSS usage with this plugin.  
 Your themes and contributions to the community are greatly appreciated.
-
-Merci à **Aleas** (communauté Emby) pour son super thème et son travail — un grand merci !
 
 > This plugin does **not** redistribute third-party theme CSS. If you use Aleas’ (or any) theme files with CSS Saison, keep their credits and respect their license terms.
 

@@ -8,12 +8,12 @@ namespace CssSaison
 {
     public class ApplySeasonTask : IScheduledTask
     {
-        public string Name => PluginConstants.Name + " — Appliquer le thème";
+        public string Name => PluginConstants.Name + " — Apply theme";
 
         public string Key => PluginConstants.TaskKey;
 
         public string Description =>
-            "Recalcule la saison et met à jour le Custom CSS Branding.";
+            "Recomputes the season and updates Branding Custom CSS.";
 
         public string Category => PluginConstants.Name;
 

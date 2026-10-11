@@ -4,7 +4,7 @@ namespace CssSaison.Configuration
 {
     public enum ForcedSeason
     {
-        [Description("Défaut (hors saison)")]
+        [Description("Default (off-season)")]
         Default = 0,
 
         [Description("Valentine")]
@@ -13,10 +13,10 @@ namespace CssSaison.Configuration
         [Description("Saint-Patrick")]
         SaintPatrick = 2,
 
-        [Description("Pâques")]
+        [Description("Easter")]
         Paques = 3,
 
-        [Description("4 Juillet")]
+        [Description("4th of July")]
         Juillet = 4,
 
         [Description("Halloween")]
@@ -25,10 +25,10 @@ namespace CssSaison.Configuration
         [Description("Thanksgiving")]
         Thanksgiving = 6,
 
-        [Description("Noël")]
+        [Description("Christmas")]
         Noel = 7,
 
-        [Description("Nouvel An")]
+        [Description("New Year")]
         NouvelAn = 8
     }
 }

@@ -6,7 +6,7 @@ namespace CssSaison.UI
 {
     public class CssEditorDialogUi : EditableOptionsBase
     {
-        // Titre/description vides : évite le double bandeau (chrome dialog + formulaire).
+        // Empty title/description avoids double chrome (dialog + form headers).
         public override string EditorTitle => string.Empty;
 
         public override string EditorDescription => string.Empty;
@@ -14,7 +14,7 @@ namespace CssSaison.UI
         [Browsable(false)]
         public string FileName { get; set; }
 
-        [DisplayName("Contenu CSS")]
+        [DisplayName("CSS content")]
         [EditMultiline(24)]
         public string CssContent { get; set; } = string.Empty;
     }

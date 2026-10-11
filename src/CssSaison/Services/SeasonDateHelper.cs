@@ -40,7 +40,8 @@ namespace CssSaison.Services
         }
 
         /// <summary>
-        /// Accepte "01-02 → 15-02", "01-02 -> 15-02", "01-02 / 15-02".
+        /// Accepts "01-02 → 15-02", "01-02 -> 15-02", "01-02 / 15-02" (spaced slash only).
+        /// Bare "/" is not used — it would break dates written as dd/MM.
         /// </summary>
         public static bool TryParsePeriod(string period, out string startDdMm, out string endDdMm)
         {
@@ -50,7 +51,8 @@ namespace CssSaison.Services
                 return false;
 
             var s = period.Trim();
-            string[] seps = { "→", "->", "/", "—" };
+            // Longer / safer separators first
+            string[] seps = { "→", "->", " / ", " — ", "—" };
             foreach (var sep in seps)
             {
                 var idx = s.IndexOf(sep, StringComparison.Ordinal);

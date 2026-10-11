@@ -6,43 +6,40 @@ using Emby.Web.GenericEdit.Validation;
 namespace CssSaison.Configuration
 {
     /// <summary>
-    /// Options + UI : dates début/fin regroupées en une seule ligne « période ».
+    /// Options + UI: start/end dates combined into one period line.
     /// </summary>
     public class PluginOptions : EditableOptionsBase
     {
         public override string EditorTitle => PluginConstants.Name;
 
         public override string EditorDescription =>
-            "Injecte un CSS dans Branding selon la date (JJ-MM).\n" +
-            "Fichiers dans le dossier css/ du plugin (aucun CSS embarqué).\n" +
-            "Hors saison → default.css. Fichier manquant → Branding non modifié.\n" +
-            "Priorité Auto = ordre des saisons ci-dessous (fixe).\n" +
-            "Période = début → fin (ex. 01-02 → 15-02).";
+            "Seasonal Branding CSS by date (DD-MM → DD-MM) + CSS editor dialogs.\n" +
+            "Files in plugin css/ folder. Off-season → default.css. Missing file → Branding unchanged.\n" +
+            "Apply: save settings / save CSS editor / task 03:15 / startup.";
 
-        [DisplayName("Activer le plugin")]
+        [DisplayName("Enable plugin")]
         public bool Enabled { get; set; } = false;
 
         [DisplayName("Mode")]
         public SeasonMode Mode { get; set; } = SeasonMode.Auto;
 
-        [DisplayName("Saison forcée (mode Manuel)")]
+        [DisplayName("Forced season (Manual mode)")]
         public ForcedSeason ForcedSeason { get; set; } = ForcedSeason.Default;
 
         [Browsable(false)]
         public string DefaultCssFileName { get; set; } = "default.css";
 
-        [DisplayName("Dossier CSS (vide = data plugin / css)")]
+        [DisplayName("CSS folder (empty = plugin data / css)")]
         public string CssFolderPath { get; set; } = string.Empty;
 
-        // —— Valentine ——
-        [DisplayName("Valentine — activée")]
+        [DisplayName("Valentine — enabled")]
         public bool ValentineEnabled { get; set; } = false;
 
         [Browsable(false)]
         public string ValentineCssFile { get; set; } = "valentine.css";
 
-        [DisplayName("Valentine — période (JJ-MM → JJ-MM)")]
-        [Description("Exemple : 01-02 → 15-02")]
+        [DisplayName("Valentine — period (DD-MM → DD-MM)")]
+        [Description("Example: 01-02 → 15-02")]
         public string ValentinePeriod { get; set; } = "01-02 → 15-02";
 
         [Browsable(false)]
@@ -51,15 +48,14 @@ namespace CssSaison.Configuration
         [Browsable(false)]
         public string ValentineEnd { get; set; } = "15-02";
 
-        // —— Saint-Patrick ——
-        [DisplayName("Saint-Patrick — activée")]
+        [DisplayName("Saint-Patrick — enabled")]
         public bool SaintPatrickEnabled { get; set; } = false;
 
         [Browsable(false)]
         public string SaintPatrickCssFile { get; set; } = "saint-patrick.css";
 
-        [DisplayName("Saint-Patrick — période (JJ-MM → JJ-MM)")]
-        [Description("Exemple : 10-03 → 18-03")]
+        [DisplayName("Saint-Patrick — period (DD-MM → DD-MM)")]
+        [Description("Example: 10-03 → 18-03")]
         public string SaintPatrickPeriod { get; set; } = "10-03 → 18-03";
 
         [Browsable(false)]
@@ -68,15 +64,14 @@ namespace CssSaison.Configuration
         [Browsable(false)]
         public string SaintPatrickEnd { get; set; } = "18-03";
 
-        // —— Pâques ——
-        [DisplayName("Pâques — activée")]
+        [DisplayName("Easter — enabled")]
         public bool PaquesEnabled { get; set; } = false;
 
         [Browsable(false)]
         public string PaquesCssFile { get; set; } = "paques.css";
 
-        [DisplayName("Pâques — période (JJ-MM → JJ-MM)")]
-        [Description("Exemple : 01-04 → 20-04")]
+        [DisplayName("Easter — period (DD-MM → DD-MM)")]
+        [Description("Example: 01-04 → 20-04")]
         public string PaquesPeriod { get; set; } = "01-04 → 20-04";
 
         [Browsable(false)]
@@ -85,15 +80,14 @@ namespace CssSaison.Configuration
         [Browsable(false)]
         public string PaquesEnd { get; set; } = "20-04";
 
-        // —— 4 Juillet ——
-        [DisplayName("4 Juillet — activée")]
+        [DisplayName("4th of July — enabled")]
         public bool JuilletEnabled { get; set; } = false;
 
         [Browsable(false)]
         public string JuilletCssFile { get; set; } = "juillet.css";
 
-        [DisplayName("4 Juillet — période (JJ-MM → JJ-MM)")]
-        [Description("Exemple : 28-06 → 06-07")]
+        [DisplayName("4th of July — period (DD-MM → DD-MM)")]
+        [Description("Example: 28-06 → 06-07")]
         public string JuilletPeriod { get; set; } = "28-06 → 06-07";
 
         [Browsable(false)]
@@ -102,15 +96,14 @@ namespace CssSaison.Configuration
         [Browsable(false)]
         public string JuilletEnd { get; set; } = "06-07";
 
-        // —— Halloween ——
-        [DisplayName("Halloween — activée")]
+        [DisplayName("Halloween — enabled")]
         public bool HalloweenEnabled { get; set; } = false;
 
         [Browsable(false)]
         public string HalloweenCssFile { get; set; } = "halloween.css";
 
-        [DisplayName("Halloween — période (JJ-MM → JJ-MM)")]
-        [Description("Exemple : 01-10 → 01-11")]
+        [DisplayName("Halloween — period (DD-MM → DD-MM)")]
+        [Description("Example: 01-10 → 01-11")]
         public string HalloweenPeriod { get; set; } = "01-10 → 01-11";
 
         [Browsable(false)]
@@ -119,15 +112,14 @@ namespace CssSaison.Configuration
         [Browsable(false)]
         public string HalloweenEnd { get; set; } = "01-11";
 
-        // —— Thanksgiving ——
-        [DisplayName("Thanksgiving — activée")]
+        [DisplayName("Thanksgiving — enabled")]
         public bool ThanksgivingEnabled { get; set; } = false;
 
         [Browsable(false)]
         public string ThanksgivingCssFile { get; set; } = "thanksgiving.css";
 
-        [DisplayName("Thanksgiving — période (JJ-MM → JJ-MM)")]
-        [Description("Exemple : 15-11 → 30-11")]
+        [DisplayName("Thanksgiving — period (DD-MM → DD-MM)")]
+        [Description("Example: 15-11 → 30-11")]
         public string ThanksgivingPeriod { get; set; } = "15-11 → 30-11";
 
         [Browsable(false)]
@@ -136,15 +128,14 @@ namespace CssSaison.Configuration
         [Browsable(false)]
         public string ThanksgivingEnd { get; set; } = "30-11";
 
-        // —— Noël ——
-        [DisplayName("Noël — activée")]
+        [DisplayName("Christmas — enabled")]
         public bool NoelEnabled { get; set; } = false;
 
         [Browsable(false)]
         public string NoelCssFile { get; set; } = "noel.css";
 
-        [DisplayName("Noël — période (JJ-MM → JJ-MM)")]
-        [Description("Exemple : 01-12 → 26-12")]
+        [DisplayName("Christmas — period (DD-MM → DD-MM)")]
+        [Description("Example: 01-12 → 26-12")]
         public string NoelPeriod { get; set; } = "01-12 → 26-12";
 
         [Browsable(false)]
@@ -153,15 +144,14 @@ namespace CssSaison.Configuration
         [Browsable(false)]
         public string NoelEnd { get; set; } = "26-12";
 
-        // —— Nouvel An ——
-        [DisplayName("Nouvel An — activée")]
+        [DisplayName("New Year — enabled")]
         public bool NouvelAnEnabled { get; set; } = false;
 
         [Browsable(false)]
         public string NouvelAnCssFile { get; set; } = "nouvel-an.css";
 
-        [DisplayName("Nouvel An — période (JJ-MM → JJ-MM)")]
-        [Description("Exemple : 27-12 → 02-01")]
+        [DisplayName("New Year — period (DD-MM → DD-MM)")]
+        [Description("Example: 27-12 → 02-01")]
         public string NouvelAnPeriod { get; set; } = "27-12 → 02-01";
 
         [Browsable(false)]
@@ -170,7 +160,6 @@ namespace CssSaison.Configuration
         [Browsable(false)]
         public string NouvelAnEnd { get; set; } = "02-01";
 
-        /// <summary>UI période ← Start/End (source de vérité moteur).</summary>
         public void PullPeriodsFromDates()
         {
             ValentinePeriod = SeasonDateHelper.FormatPeriod(ValentineStart, ValentineEnd);
@@ -183,7 +172,6 @@ namespace CssSaison.Configuration
             NouvelAnPeriod = SeasonDateHelper.FormatPeriod(NouvelAnStart, NouvelAnEnd);
         }
 
-        /// <summary>Start/End ← UI période (avant save / apply / validate).</summary>
         public void PushPeriodsToDates()
         {
             if (SeasonDateHelper.TryParsePeriod(ValentinePeriod, out var vStart, out var vEnd))
@@ -242,12 +230,12 @@ namespace CssSaison.Configuration
 
             ValidatePeriod(context, ValentineEnabled, ValentinePeriod, "Valentine");
             ValidatePeriod(context, SaintPatrickEnabled, SaintPatrickPeriod, "Saint-Patrick");
-            ValidatePeriod(context, PaquesEnabled, PaquesPeriod, "Pâques");
-            ValidatePeriod(context, JuilletEnabled, JuilletPeriod, "4 Juillet");
+            ValidatePeriod(context, PaquesEnabled, PaquesPeriod, "Easter");
+            ValidatePeriod(context, JuilletEnabled, JuilletPeriod, "4th of July");
             ValidatePeriod(context, HalloweenEnabled, HalloweenPeriod, "Halloween");
             ValidatePeriod(context, ThanksgivingEnabled, ThanksgivingPeriod, "Thanksgiving");
-            ValidatePeriod(context, NoelEnabled, NoelPeriod, "Noël");
-            ValidatePeriod(context, NouvelAnEnabled, NouvelAnPeriod, "Nouvel An");
+            ValidatePeriod(context, NoelEnabled, NoelPeriod, "Christmas");
+            ValidatePeriod(context, NouvelAnEnabled, NouvelAnPeriod, "New Year");
         }
 
         private static void ValidatePeriod(ValidationContext context, bool enabled, string period, string label)
@@ -256,7 +244,7 @@ namespace CssSaison.Configuration
                 return;
 
             if (!SeasonDateHelper.TryParsePeriod(period, out _, out _))
-                context.AddValidationError(label + " — période invalide (ex. 01-02 → 15-02).");
+                context.AddValidationError(label + " — invalid period (e.g. 01-02 → 15-02).");
         }
     }
 }

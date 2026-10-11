@@ -4,10 +4,10 @@ namespace CssSaison.Configuration
 {
     public enum SeasonMode
     {
-        [Description("Automatique (selon la date)")]
+        [Description("Automatic (by date)")]
         Auto = 0,
 
-        [Description("Manuel (règle forcée par nom)")]
+        [Description("Manual (forced season)")]
         Manual = 1
     }
 }

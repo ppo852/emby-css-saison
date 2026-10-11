@@ -15,7 +15,7 @@ namespace CssSaison
     {
         private List<IPluginUIPageController> _pages;
 
-        // IApplicationPaths requis par le DI Emby (DataFolderPath via BasePlugin).
+        // IApplicationPaths required by Emby DI (DataFolderPath via BasePlugin).
         public Plugin(IApplicationHost applicationHost, IApplicationPaths applicationPaths, ILogManager logManager)
         {
             Instance = this;
@@ -38,7 +38,7 @@ namespace CssSaison
         public override string Name => PluginConstants.Name;
 
         public override string Description =>
-            "Injecte un CSS Branding selon des règles de dates (JJ-MM), avec éditeur CSS (dialog).";
+            "Applies Branding Custom CSS by calendar windows (DD-MM), with an in-dashboard CSS editor.";
 
         public Configuration.PluginOptions Options => OptionsStore.GetOptions();
 

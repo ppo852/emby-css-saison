@@ -16,7 +16,7 @@ namespace CssSaison.UI
         {
             _folder = folder;
             _themeLabel = themeLabel ?? string.Empty;
-            OKButtonCaption = "Enregistrer";
+            OKButtonCaption = "Save";
             AllowCancel = true;
             AllowOk = true;
             DialogSize = MediaBrowser.Model.Plugins.UI.Views.Enums.DialogSize.FullScreen;

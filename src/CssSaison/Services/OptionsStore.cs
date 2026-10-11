@@ -41,13 +41,13 @@ namespace CssSaison.Services
                 }
                 catch (Exception ex)
                 {
-                    _logger.ErrorException("Lecture options CSS Saison", ex);
+                    _logger.ErrorException("Failed to read CSS Saison options", ex);
                 }
 
                 if (_options == null)
                     _options = new PluginOptions();
 
-                // Anciennes configs : Start/End seuls → reconstruire la ligne période pour l'UI
+                // Legacy configs: rebuild period line from Start/End for the UI
                 _options.PullPeriodsFromDates();
                 return _options;
             }

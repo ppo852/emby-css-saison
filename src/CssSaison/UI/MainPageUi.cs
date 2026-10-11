@@ -1,35 +1,35 @@
 using System.ComponentModel;
 using CssSaison.Configuration;
-using Emby.Web.GenericEdit;
 using Emby.Web.GenericEdit.Elements;
 
 namespace CssSaison.UI
 {
     /// <summary>
-    /// UI principale : options + boutons ouvrant le dialog d'édition CSS.
+    /// Main UI: options + buttons that open the CSS editor dialog.
     /// </summary>
     public class MainPageUi : PluginOptions
     {
         public MainPageUi()
         {
-            EditDefaultCssButton = new ButtonItem("Éditer CSS — Défaut") { Data1 = "EditCss:Default" };
-            EditValentineCssButton = new ButtonItem("Éditer CSS — Valentine") { Data1 = "EditCss:Valentine" };
-            EditSaintPatrickCssButton = new ButtonItem("Éditer CSS — Saint-Patrick") { Data1 = "EditCss:SaintPatrick" };
-            EditPaquesCssButton = new ButtonItem("Éditer CSS — Pâques") { Data1 = "EditCss:Paques" };
-            EditJuilletCssButton = new ButtonItem("Éditer CSS — 4 Juillet") { Data1 = "EditCss:Juillet" };
-            EditHalloweenCssButton = new ButtonItem("Éditer CSS — Halloween") { Data1 = "EditCss:Halloween" };
-            EditThanksgivingCssButton = new ButtonItem("Éditer CSS — Thanksgiving") { Data1 = "EditCss:Thanksgiving" };
-            EditNoelCssButton = new ButtonItem("Éditer CSS — Noël") { Data1 = "EditCss:Noel" };
-            EditNouvelAnCssButton = new ButtonItem("Éditer CSS — Nouvel An") { Data1 = "EditCss:NouvelAn" };
+            EditDefaultCssButton = new ButtonItem("Edit CSS — Default") { Data1 = "EditCss:Default" };
+            EditValentineCssButton = new ButtonItem("Edit CSS — Valentine") { Data1 = "EditCss:Valentine" };
+            EditSaintPatrickCssButton = new ButtonItem("Edit CSS — Saint-Patrick") { Data1 = "EditCss:SaintPatrick" };
+            EditPaquesCssButton = new ButtonItem("Edit CSS — Easter") { Data1 = "EditCss:Paques" };
+            EditJuilletCssButton = new ButtonItem("Edit CSS — 4th of July") { Data1 = "EditCss:Juillet" };
+            EditHalloweenCssButton = new ButtonItem("Edit CSS — Halloween") { Data1 = "EditCss:Halloween" };
+            EditThanksgivingCssButton = new ButtonItem("Edit CSS — Thanksgiving") { Data1 = "EditCss:Thanksgiving" };
+            EditNoelCssButton = new ButtonItem("Edit CSS — Christmas") { Data1 = "EditCss:Noel" };
+            EditNouvelAnCssButton = new ButtonItem("Edit CSS — New Year") { Data1 = "EditCss:NouvelAn" };
         }
 
         public override string EditorDescription =>
-            "Saisons (période JJ-MM → JJ-MM) + éditeur CSS (dialogs).\n" +
-            "Fichiers enregistrés dans css/ du plugin. Hors saison → default.css.\n" +
-            "Fichier manquant → Branding non modifié. Apply : save / tâche 03:15 / démarrage.";
+            "Seasons (period DD-MM → DD-MM) + CSS editor dialogs.\n" +
+            "Files are saved in the plugin css/ folder. Off-season → default.css.\n" +
+            "Missing file → Branding unchanged.\n" +
+            "Apply: save settings / save CSS editor / task 03:15 / startup.";
 
-        [DisplayName("Éditeur CSS")]
-        [Description("Ouvre un dialog pour coller / modifier le CSS de chaque thème.")]
+        [DisplayName("CSS editor")]
+        [Description("Open a dialog to paste / edit CSS for each theme.")]
         public ButtonItem EditDefaultCssButton { get; set; }
 
         public ButtonItem EditValentineCssButton { get; set; }

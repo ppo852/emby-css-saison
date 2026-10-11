@@ -4,6 +4,13 @@ All notable changes to **CSS Saison** are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/). Versioning follows [SemVer](https://semver.org/).
 
+## [0.1.1] — 2026-10-11
+
+### Changed
+- Dashboard UI strings are **English-only** (simpler for Emby forum / GitHub)
+- Docs aligned with code: task name **Apply theme**, apply also runs after **CSS editor Save**
+- Safer period parsing (no bare `/` separator); fallback CSS file names keep hyphens (`saint-patrick.css`, …)
+
 ## [0.1.0] — 2026-10-11
 
 ### Added
@@ -12,9 +19,11 @@ Format based on [Keep a Changelog](https://keepachangelog.com/). Versioning foll
 - Modes: **Auto** (date match + fixed priority order) and **Manual** (forced season)
 - Dashboard UI (`IHasUIPages`) under **Server → CSS Saison**
 - Full-screen CSS editor dialogs (paste / save per theme)
-- Apply on: server start, settings save, and daily scheduled task (**03:15** server time)
+- Apply on: server start, settings save, CSS editor save, and daily scheduled task (**03:15** server time)
 - Safe behaviour: missing or empty CSS → Branding unchanged; identical CSS → no rewrite
 - Defaults: plugin and all seasons **disabled** until configured
 - MIT license (CSS content remains the user’s responsibility)
+- Credits: thanks to **Aleas** (Emby community) for theme inspiration
 
+[0.1.1]: https://github.com/ppo852/emby-css-saison/releases/tag/v0.1.1
 [0.1.0]: https://github.com/ppo852/emby-css-saison/releases/tag/v0.1.0
