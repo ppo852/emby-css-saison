@@ -4,9 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>CssSaison</RootNamespace>
     <AssemblyName>CssSaison</AssemblyName>
-    <Version>0.1.1</Version>
-    <AssemblyVersion>0.1.1.0</AssemblyVersion>
-    <FileVersion>0.1.1.0</FileVersion>
+    <Version>0.1.2</Version>
+    <AssemblyVersion>0.1.2.0</AssemblyVersion>
+    <FileVersion>0.1.2.0</FileVersion>
     <Description>Emby Server plugin — Branding Custom CSS by calendar windows (DD-MM) with in-dashboard editor</Description>
     <Authors>CSS Saison</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

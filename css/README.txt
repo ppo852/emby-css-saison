@@ -9,11 +9,11 @@ Suggested names:
   default.css
   valentine.css
   saint-patrick.css
-  paques.css
-  juillet.css
+  easter.css
+  july-4.css
   halloween.css
   thanksgiving.css
-  noel.css
-  nouvel-an.css
+  christmas.css
+  new-year.css
 
 No CSS is embedded in the DLL. You own the content and licenses of these files.

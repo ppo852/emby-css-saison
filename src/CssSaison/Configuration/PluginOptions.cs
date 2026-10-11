@@ -68,7 +68,7 @@ namespace CssSaison.Configuration
         public bool PaquesEnabled { get; set; } = false;
 
         [Browsable(false)]
-        public string PaquesCssFile { get; set; } = "paques.css";
+        public string PaquesCssFile { get; set; } = "easter.css";
 
         [DisplayName("Easter — period (DD-MM → DD-MM)")]
         [Description("Example: 01-04 → 20-04")]
@@ -84,7 +84,7 @@ namespace CssSaison.Configuration
         public bool JuilletEnabled { get; set; } = false;
 
         [Browsable(false)]
-        public string JuilletCssFile { get; set; } = "juillet.css";
+        public string JuilletCssFile { get; set; } = "july-4.css";
 
         [DisplayName("4th of July — period (DD-MM → DD-MM)")]
         [Description("Example: 28-06 → 06-07")]
@@ -132,7 +132,7 @@ namespace CssSaison.Configuration
         public bool NoelEnabled { get; set; } = false;
 
         [Browsable(false)]
-        public string NoelCssFile { get; set; } = "noel.css";
+        public string NoelCssFile { get; set; } = "christmas.css";
 
         [DisplayName("Christmas — period (DD-MM → DD-MM)")]
         [Description("Example: 01-12 → 26-12")]
@@ -148,7 +148,7 @@ namespace CssSaison.Configuration
         public bool NouvelAnEnabled { get; set; } = false;
 
         [Browsable(false)]
-        public string NouvelAnCssFile { get; set; } = "nouvel-an.css";
+        public string NouvelAnCssFile { get; set; } = "new-year.css";
 
         [DisplayName("New Year — period (DD-MM → DD-MM)")]
         [Description("Example: 27-12 → 02-01")]

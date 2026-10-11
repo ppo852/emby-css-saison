@@ -4,6 +4,14 @@ All notable changes to **CSS Saison** are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/). Versioning follows [SemVer](https://semver.org/).
 
+## [0.1.2] — 2026-10-11
+
+### Changed
+- Default CSS file names are English: `easter.css`, `july-4.css`, `christmas.css`, `new-year.css`
+
+### Migration
+- If you used `paques.css` / `juillet.css` / `noel.css` / `nouvel-an.css`, rename them or re-save CSS from the editor
+
 ## [0.1.1] — 2026-10-11
 
 ### Changed
@@ -25,5 +33,6 @@ Format based on [Keep a Changelog](https://keepachangelog.com/). Versioning foll
 - MIT license (CSS content remains the user’s responsibility)
 - Credits: thanks to **Aleas** (Emby community) for theme inspiration
 
+[0.1.2]: https://github.com/ppo852/emby-css-saison/releases/tag/v0.1.2
 [0.1.1]: https://github.com/ppo852/emby-css-saison/releases/tag/v0.1.1
 [0.1.0]: https://github.com/ppo852/emby-css-saison/releases/tag/v0.1.0

@@ -3,7 +3,7 @@
 **Emby Server plugin** — switch **Branding Custom CSS** by calendar windows (`DD-MM`), with an in-dashboard CSS editor.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.1-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.1.2-green.svg)](CHANGELOG.md)
 [![Target](https://img.shields.io/badge/Emby-4.9.x-orange.svg)](#compatibility)
 
 ---
@@ -50,18 +50,16 @@ Dashboard UI language is **English**. The product name **CSS Saison** is kept as
 |-------------|----------------------------------|-------------------|
 | Valentine | `01-02 → 15-02` | `valentine.css` |
 | Saint-Patrick | `10-03 → 18-03` | `saint-patrick.css` |
-| Easter | `01-04 → 20-04` | `paques.css` |
-| 4th of July | `28-06 → 06-07` | `juillet.css` |
+| Easter | `01-04 → 20-04` | `easter.css` |
+| 4th of July | `28-06 → 06-07` | `july-4.css` |
 | Halloween | `01-10 → 01-11` | `halloween.css` |
 | Thanksgiving | `15-11 → 30-11` | `thanksgiving.css` |
-| Christmas | `01-12 → 26-12` | `noel.css` |
-| New Year | `27-12 → 02-01` | `nouvel-an.css` |
+| Christmas | `01-12 → 26-12` | `christmas.css` |
+| New Year | `27-12 → 02-01` | `new-year.css` |
 | Default (off-season) | — | `default.css` |
 
 Periods and enable flags are editable. Seasons are **fixed** (not a dynamic rule list).  
 By default the **plugin and all seasons are disabled** — enable what you need.
-
-Default **file names** keep short historical stems (`noel.css`, `paques.css`, …); you can rename them in config if needed.
 
 Period format in the UI: `01-12 → 26-12` (also accepts `->` or spaced ` / `).
 
@@ -84,12 +82,12 @@ css/
   default.css
   valentine.css
   saint-patrick.css
-  paques.css
-  juillet.css
+  easter.css
+  july-4.css
   halloween.css
   thanksgiving.css
-  noel.css
-  nouvel-an.css
+  christmas.css
+  new-year.css
 ```
 
 You can create them via the **Edit CSS** buttons (empty file until you paste content).

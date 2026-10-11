@@ -217,12 +217,12 @@ namespace CssSaison.Services
             {
                 case "Valentine": return "valentine.css";
                 case "SaintPatrick": return "saint-patrick.css";
-                case "Paques": return "paques.css";
-                case "Juillet": return "juillet.css";
+                case "Paques": return "easter.css";
+                case "Juillet": return "july-4.css";
                 case "Halloween": return "halloween.css";
                 case "Thanksgiving": return "thanksgiving.css";
-                case "Noel": return "noel.css";
-                case "NouvelAn": return "nouvel-an.css";
+                case "Noel": return "christmas.css";
+                case "NouvelAn": return "new-year.css";
                 default: return "default.css";
             }
         }
