@@ -153,6 +153,17 @@ Plugin Emby Server qui applique un Custom CSS Branding selon des périodes JJ-MM
 
 ---
 
+## Credits / Acknowledgments
+
+Special thanks to **Aleas** from the Emby community for the excellent theme work that inspired seasonal CSS usage with this plugin.  
+Your themes and contributions to the community are greatly appreciated.
+
+Merci à **Aleas** (communauté Emby) pour son super thème et son travail — un grand merci !
+
+> This plugin does **not** redistribute third-party theme CSS. If you use Aleas’ (or any) theme files with CSS Saison, keep their credits and respect their license terms.
+
+---
+
 ## Contributing
 
 Issues and pull requests are welcome. Please:

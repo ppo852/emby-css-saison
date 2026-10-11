@@ -27,3 +27,6 @@ This plugin does not ship theme CSS inside the DLL. Any CSS you place in the
 plugin css/ folder remains your responsibility (content and license).
 If you distribute CSS derived from third-party themes (e.g. Emby community
 themes), you must respect their original licenses and credits.
+
+Community acknowledgment: thanks to Aleas (Emby community) for outstanding
+theme work that inspired seasonal CSS workflows with this plugin.
