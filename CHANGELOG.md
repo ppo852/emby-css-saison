@@ -4,35 +4,19 @@ All notable changes to **CSS Saison** are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/). Versioning follows [SemVer](https://semver.org/).
 
-## [0.1.2] — 2026-10-11
-
-### Changed
-- Default CSS file names are English: `easter.css`, `july-4.css`, `christmas.css`, `new-year.css`
-
-### Migration
-- If you used `paques.css` / `juillet.css` / `noel.css` / `nouvel-an.css`, rename them or re-save CSS from the editor
-
-## [0.1.1] — 2026-10-11
-
-### Changed
-- Dashboard UI strings are **English-only** (simpler for Emby forum / GitHub)
-- Docs aligned with code: task name **Apply theme**, apply also runs after **CSS editor Save**
-- Safer period parsing (no bare `/` separator); fallback CSS file names keep hyphens (`saint-patrick.css`, …)
-
 ## [0.1.0] — 2026-10-11
 
 ### Added
 - Emby Server plugin that applies **Branding Custom CSS** from user-supplied files
 - Eight fixed seasonal windows with enable toggles and periods (`DD-MM → DD-MM`)
 - Modes: **Auto** (date match + fixed priority order) and **Manual** (forced season)
-- Dashboard UI (`IHasUIPages`) under **Server → CSS Saison**
+- Dashboard UI (`IHasUIPages`) under **Server → CSS Saison** — **English-only**
 - Full-screen CSS editor dialogs (paste / save per theme)
 - Apply on: server start, settings save, CSS editor save, and daily scheduled task (**03:15** server time)
 - Safe behaviour: missing or empty CSS → Branding unchanged; identical CSS → no rewrite
 - Defaults: plugin and all seasons **disabled** until configured
+- Default CSS file names in English (`christmas.css`, `easter.css`, `july-4.css`, `new-year.css`, …)
 - MIT license (CSS content remains the user’s responsibility)
 - Credits: thanks to **Aleas** (Emby community) for theme inspiration
 
-[0.1.2]: https://github.com/ppo852/emby-css-saison/releases/tag/v0.1.2
-[0.1.1]: https://github.com/ppo852/emby-css-saison/releases/tag/v0.1.1
 [0.1.0]: https://github.com/ppo852/emby-css-saison/releases/tag/v0.1.0

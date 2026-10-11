@@ -3,7 +3,7 @@
 **Emby Server plugin** — switch **Branding Custom CSS** by calendar windows (`DD-MM`), with an in-dashboard CSS editor.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.2-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-0.1.0-green.svg)](CHANGELOG.md)
 [![Target](https://img.shields.io/badge/Emby-4.9.x-orange.svg)](#compatibility)
 
 ---
